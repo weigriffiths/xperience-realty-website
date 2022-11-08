@@ -1,6 +1,8 @@
 import { AspectRatio, Box, Container, Button, Divider, Flex, FormControl, FormLabel, Heading, Input, Text, Textarea, VStack, Spacer } from '@chakra-ui/react'
 import React from 'react'
 
+// https://developers.google.com/maps/documentation/embed/quickstart
+
 export default function contact() {
   return (
     <>
