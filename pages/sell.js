@@ -23,7 +23,8 @@ export default function Sell() {
   useEffect(() => {
     sellData.map((obj, iter) => (obj.icon = setIcons[iter]))
     
-  }, [])
+  })
+
   return (
     <>
       <Box>
