@@ -51,11 +51,11 @@ const TeamCard = ({imgUrl, hoverImgUrl, name, title, phone, email}) => {
                   />
               </Link>
               <Flex bg="white" position="absolute" bottom={0} right={0} w="full" align="center">
-                  <Box px={2} py={3} borderRight={1} w={"50%"} textAlign="center" fontWeight="bold" onClick={handleTogglePhone} cursor="pointer">
+                  <Box px={2} py={3} borderRight={1} w={showPhone ? "100%" : "50%"} textAlign="center" fontWeight="bold" onClick={handleTogglePhone} cursor="pointer" display={showEmail ? "none" : null}>
                     {showPhone ? phone : "Call"}
                   </Box>
                   <Spacer borderRight="1px" borderColor="brand.midGrey" />
-                  <Box px={2} py={3} textAlign="center" w={showEmail ? "75%" : "50%"} fontWeight="bold" fontSize={showEmail? "xs": "md"} onClick={handleToggleEmail} cursor="pointer">
+                  <Box px={2} py={3} textAlign="center" w={showEmail ? "100%" : "50%"} fontWeight="bold" fontSize={showEmail? "xs": "md"} onClick={handleToggleEmail} cursor="pointer" display={showPhone ? "none" : null}>
                     {showEmail ? email : "Email"}
                   </Box>
               </Flex>
