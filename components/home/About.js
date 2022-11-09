@@ -28,7 +28,7 @@ export default function About() {
         </VStack>
         {/* <Image borderRadius={8} boxShadow="lg" objectFit="cover" alt="front office" src="/front-office.jpg" maxW={["100%", "100%", "100%", "100%", "500px"]} minW={["250px"]}/> */}
         <AspectRatio ratio={16 / 9} borderRadius={8} boxShadow="lg" maxW={["100%", "100%", "100%", "100%", "500px"]} minW={["250px"]} w="720px">
-          <iframe src="https://www.youtube.com/embed/PrJdcmZqj8g?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  />
+          <iframe src="https://www.youtube.com/embed/PrJdcmZqj8g?autoplay=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  />
         </AspectRatio>
       </Flex>
 
