@@ -16,7 +16,7 @@ export default function HomePage() {
           <Box mt={[10, 10, 10, 0]} />
           <Hero />
           <Box mt={20} />
-          <Image alt="awards" src="/awards.svg" w="full" />
+          <Image alt="awards" src="/awards.png" w="full" />
           <Box mt={16} />
           <Listings />
           <Box mt={16} />
