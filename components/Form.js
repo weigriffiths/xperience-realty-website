@@ -14,7 +14,7 @@ export default function Form() {
     <Box 
       p={5} 
       mx="auto"
-      maxW="60%"
+      maxW={["100%", "100%", "80%", "60%"]}
       bg="black" 
       backgroundImage="url('/x-badge-overlay.svg'), linear-gradient(316deg,#f15a29 0%,#f89939 100%);"
       backgroundPosition="center"
@@ -32,7 +32,7 @@ export default function Form() {
         </Text>
         <FormControl >
           <VStack spacing={4} align="flex-start">
-            <Grid templateColumns='repeat(4, 1fr)' gap={4} alignItems="center" justify="center">
+            <Grid templateColumns={['1fr', '1fr', '1fr', '1fr 1fr','repeat(4, 1fr)']} gap={4} alignItems="center" justify="center" w="full">
               <GridItem colSpan={1}>
                 <FormLabel>Full Name</FormLabel>
                 <Input type='name' _focus="none"/>
@@ -41,7 +41,7 @@ export default function Form() {
                 <FormLabel>Phone number</FormLabel>
                 <Input type='phone' _focus={"none"}/>
               </GridItem>
-              <GridItem colSpan={2} >
+              <GridItem colSpan={[1,1,1, 2]} >
                 <FormLabel>Email address</FormLabel>
                 <Input type='email' _focus="none"/>
               </GridItem>

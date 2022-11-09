@@ -25,6 +25,7 @@ export default function AboutPage() {
           <Press />
           <Box mt={16} />
           <Form />
+          <Box mt={16} />
         </Container>
       </Box>
     </>
