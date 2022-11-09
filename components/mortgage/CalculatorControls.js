@@ -10,7 +10,7 @@ const localeOptions = {
 
 export default function CalculatorControls(props){
 	return(
-		<Grid templateColumns={'repeat(2,1fr)'} templateRows={'repeat(2,1fr)'} gap={6}>			
+		<Grid templateColumns={['1fr', 'repeat(2,1fr)']} templateRows={'repeat(2,1fr)'} gap={6}>			
 			<GridItem>
         <Text fontSize="sm">
           Purchase Price |&nbsp;  

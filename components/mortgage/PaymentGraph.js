@@ -212,7 +212,7 @@ export default function PaymentGraph({mortgageTerm, yearlyPayments}) {
 	}, [mortgageTerm, yearlyPayments]	)
 
 	return (
-		<Box maxW="650px">
+		<Box maxW={["650px"]}>
 			<Line 
 				data={chartData}
 				options={graphOptions}
