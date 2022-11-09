@@ -7,7 +7,7 @@ import React from 'react'
 export default function contact() {
   return (
     <>
-      <Box>
+      <Box overflow="hidden">
         <Container maxW="90%">
           <Box textAlign="center" py={10}>
             <Heading as="h1" fontSize="4xl" mb={4} fontWeight="extrabold" textTransform="capitalize" textColor="brand.brandOrange"> Contact Us</Heading>
@@ -33,10 +33,10 @@ export default function contact() {
             </Box>
           </Stack>
           <Box mt={16} />
-          <Flex flexGrow direction={["column", "column", "column", "row"]} justify="space-between" align="center" mb={[4,4,4,0]}>
+          <Flex flexGrow direction={["column", "column", "column", "row"]} justify={["center", "center", "center", "space-between"]} align="center" mb={[4,4,4,0]}>
             {/* <AspectRatio ratio={12 / 9}> */}
               {/* w={["250px", "350px", "450px", "600px"]} h={["auto"]} */}
-            <Box w="full" maxW="100%">
+            <Box>
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.425204486827!2d152.9889924153363!3d-27.487148724026675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9150af5ce55153%3A0xb6fc77098c956bfb!2sXperience%20Realty!5e0!3m2!1sen!2sau!4v1667960977607!5m2!1sen!2sau" 
                 width="600" height="450" 
