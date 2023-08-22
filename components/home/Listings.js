@@ -2,30 +2,40 @@ import { Box, Container, Flex, Heading, HStack, Icon, Text } from '@chakra-ui/re
 import React from 'react'
 import Link from 'next/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { useCollectionData } from 'react-firebase-hooks/firestore'
+import { collection } from 'firebase/firestore'
+
 
 import Card from '../Card'
-import { listings } from '../../data/dummy'
+import { db } from '../../firebase'
+import { isListingNew } from '../../lib/utils'
 
 export default function Listings() {
+  const listingsRef = collection(db, 'listings')
+  const [listings, loading, error] = useCollectionData(listingsRef)
+  
+  const getSaleListings = listings?.filter(listing => listing.saleMode === 'buy').slice(0,10)
+  
   return (
     <section>
       <Heading as="h1" fontSize="xl" mb={5}>
         All Listings
       </Heading>
-      <HStack overflowX="scroll" spacing={4}>
-        {listings.map(listing => (
+      <HStack overflowX="scroll" spacing={4} align="start">
+        {getSaleListings?.map(item => (
           <Card 
-            key={listing.id}
-            isNew={true}
-            listedBy={listing.listedBy} 
-            imageSrc={listing.imageSrc} 
-            address={listing.address} 
-            suburb={listing.suburb} 
-            postcode={listing.postcode}
-            price={listing.price}
-            bedroom={listing.bedroom} 
-            bathroom={listing.bathroom}
-            landSize={listing.floorSpace}
+            // onClick={router.push(`/listings/${item.id}`)}
+            key={item.id}
+            isNew={isListingNew(item.dateListed)}
+            listedBy={item.advertiserIdentifiers.agentIds[0]} 
+            imageSrc={item.media[0].url} 
+            address={`${item.addressParts.streetNumber} ${item.addressParts.street}`} 
+            suburb={item.addressParts.suburb} 
+            postcode={item.addressParts.postcode}
+            price={item.priceDetails.displayPrice}
+            bedroom={item.bedrooms} 
+            bathroom={item.bathrooms}
+            landSize={item.landAreaSqm}
             />
         ))}
       </HStack>

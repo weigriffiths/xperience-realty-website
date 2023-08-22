@@ -4,10 +4,10 @@ import React from 'react'
 export default function Opening() {
   return (
     <section >
+      <Heading textAlign="center" mb={6} as="h1" fontSize="3xl" color="brand.brandOrange" textTransform="capitalize" >Xperience The Difference</Heading>
       <Flex direction={["column", "column", "row"]} justify="space-between">
         <VStack spacing={4} mr={[0,0,5]} mb={[5,5,0]} lineHeight={2}>
-          <Heading as="h1" fontSize="3xl" color="brand.brandPurple" textTransform="capitalize" >Xperience The Difference</Heading>
-          <Box textAlign="left" w="75%">
+          <Box textAlign="left">
             <Text>We pride ourselves on being your friendly local neighbourhood agents. We&apos;ve sold hundreds of properties in Brisbane, and we&apos;ve picked up plenty of awards along the way.</Text>
             <br/>
             <Text>So if you want an appraisal, or a market update, we&apos;re more than happy to oblige.</Text>

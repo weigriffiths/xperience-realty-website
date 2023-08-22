@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <Box>
         <Container maxW='90%'>
-          <Box mt={[10, 10, 10, 0]} />
+          <Box mt={10} />
           <Hero />
           <Box mt={20} />
           <Image alt="awards" src="/awards.png" w="full" />

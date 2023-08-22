@@ -25,3 +25,11 @@ a {
   -webkit-animation: flash 1s;
   animation: flash 1s;
 }
+
+swiper-container::part(button-prev) {
+  color: #ff6900;
+}
+
+swiper-container::part(button-next) {
+  color: #ff6900;
+}

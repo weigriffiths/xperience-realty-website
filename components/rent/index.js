@@ -25,8 +25,8 @@ export default function index() {
       <Benefits />
       <Box mt={16} />
       <Why />
-      <Box mt={16} />
-      <SocialProof />
+      {/* <Box mt={16} /> */}
+      {/* <SocialProof /> */}
       <Box mt={16} />
       <VStack spacing={8}>
         <Heading as="h1" textTransform="uppercase" fontWeight="light" color="brand.brandOrange">

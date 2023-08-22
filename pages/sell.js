@@ -1,29 +1,16 @@
-import { Box, Container, Heading, Text, Divider, VStack, Flex, Icon, Stack, Center } from '@chakra-ui/react'
+import { Box, Container, Heading, Text, Divider, VStack, Flex, Stack, Center } from '@chakra-ui/react'
 import React, {useEffect} from 'react'
-import { BsCardChecklist } from 'react-icons/bs'
-import { IoMdTrendingUp } from 'react-icons/io'
-import { GoHome } from 'react-icons/go'
-import { TiDeviceDesktop, TiContacts } from 'react-icons/ti'
-import { RiContactsBookLine } from 'react-icons/ri'
+
 
 import { sellData } from '../data/sellPage'
 import SimpleForm from '../components/SimpleForm'
 
-const setIcons = [
-  BsCardChecklist,
-  IoMdTrendingUp,
-  GoHome,
-  TiDeviceDesktop,
-  TiContacts
-]
-
-
 export default function Sell() {
 
-  useEffect(() => {
-    sellData.map((obj, iter) => (obj.icon = setIcons[iter]))
+  // useEffect(() => {
+  //   sellData.map((obj, iter) => (obj.icon = setIcons[iter]))
     
-  })
+  // })
 
   return (
     <>
@@ -41,7 +28,7 @@ export default function Sell() {
             <Stack key={section.title} spacing={3} mb={12} textAlign="left" w="60%" mx="auto">
               <Flex justify="flex-start" align="center">
                 <Flex align="center" justify="center" bgColor="brand.lightGrey" p={4} w={14} h={14} borderRadius={"50%"} mr={5}>
-                <Icon as={section.icon} w={8} h={8} />
+                {section.icon}
                 </Flex> 
                 <Heading as="h1" fontSize="xl">{section.title}</Heading>
               </Flex>
